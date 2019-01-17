@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+import base64
+
+# read content of the file to bytes
+data = open("example_excel.xlsx", "rb")
+
+# convert bytes to bas64
+data_b64 = base64.encode(data, open("example_base64_output", "wb+"))
+
+print(open("example_base64_output", "wb+").read())
